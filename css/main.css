@@ -1,0 +1,605 @@
+/* GENEL AYARLAR */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+body {
+    background-color: white;
+    color: #3f3f3f;
+    font: 14px / 28px;
+    font-family: 'Raleway';
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+h1 {
+    font-size: 52px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.section-area {
+    padding: 80px 0;
+}
+
+.section-header {
+    background: #550d16;
+    border-bottom: 6px solid #000;
+    height: 60px;
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    font-size: 24px;
+    padding: 5px 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    color: #550d16;
+    font-weight: bold;
+    transition: all .5s linear;
+}
+
+/* GRID AYARLAR */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.features-body .container {
+    justify-content: space-between;
+}
+
+.col3 {
+    flex-grow: 1;
+    width: 33.33%;
+}
+
+.engine-body .container {
+    justify-content: space-between;
+}
+
+.col2 {
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+/* HOME  AYARLAR---------------------------------------------------------- */
+
+header .logo {
+    margin-right: auto;
+    height: 70px;
+}
+
+/* header .logo img{
+    height: 70px; 
+    display:block;
+} */
+
+header .menu li {
+    float: left;
+}
+
+header .menu li a {
+    display: block;
+    padding: 27px 17px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #333;
+    transition: all .5s linear;
+}
+
+.menu li a:hover {
+    background: #550d16;
+    color: #eee;
+}
+
+/* ilk cıkan yerdeki yukseklıgı tam olamayan resım ve uzerındekı yazılar. */
+
+#main-slider {
+    height: 500px;
+    background: url(../img/car3.jpg) center center no-repeat;
+    background-size: cover;
+    /* opacity: .8; */
+    transform: scale(1);
+}
+
+.slider {
+    width: 100%;
+}
+
+#main-caption {
+    height: 500px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    color: #eee;
+}
+
+/* FEATURES ------------------------------*/
+
+.future-top {
+    text-align: center;
+}
+
+.item {
+    padding: 10px 20px;
+}
+
+.zoom {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    /* burası farklı*/
+    vertical-align: text-top;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all .5s linear;
+}
+
+.item .item-text {
+    text-align: center;
+    padding: 8px 5px;
+    border: 1px solid #550d16;
+}
+
+.item-text p {
+    margin: 20px 0;
+}
+
+.item:hover .zoom img {
+    transform: scale(1.3);
+}
+
+.item:hover h3 {
+    color: white;
+}
+
+.item:hover .item-text {
+    background-color: #550d16;
+    color: white;
+    transition: all .5s linear;
+}
+
+.btn-details {
+    color: #550d16 !important;
+    padding: 5px 10px;
+    border: 1px solid #550d16;
+    transition: all .5s linear;
+    display: inline-block;
+}
+
+.item:hover .btn-details {
+    color: #fff !important;
+    border: 1px solid #fff;
+}
+
+/* PARALLAX BOLUMU  ------------------------------*/
+
+/* height:200 olan ve ıcınden resım gecen fixed olan bolum */
+
+#parallax {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/pa2.jpg) fixed center no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+/*  ENGNEEE --------------------------*/
+
+.engine-top {
+    text-align: center;
+}
+
+.engine-container {
+    position: relative;
+    width: 100%;
+  
+}
+.image-over{
+    display: block;
+    width: 100%;
+   height: auto;
+}
+.engine-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(80, 13, 22, .7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition:.5s linear;
+}
+
+.engine-container:hover .engine-overlay{
+    width: 100%;
+}
+.engine-text{
+    white-space: nowrap;
+    color:white;
+    font-size: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.engine-overlay2{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(80, 13, 22, .7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition:.5s linear;
+}
+.engine-container:hover .engine-overlay2{
+    width: 100%;
+    left: 0;
+}
+
+/*  FOTEERR --------------  */
+
+footer{
+    background: #550d16;
+    text-align: center;
+}
+.footer-item{
+    padding: 20px;
+}
+footer a{
+    color:#95a5a6 !important;
+}
+footer img{
+    height: 50px;
+    opacity: .5;
+    margin-bottom: 10px;
+}
+footer h3{
+    color:#eee;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+footer .fa{
+    font-size: 30px;
+    color:#95a5a6;
+    line-height: 40px;
+    transition: .3s ease;
+}
+footer .fa:hover{
+    color:#eee;
+}
+
+footer p{
+    color:#95a5a6;
+    margin-top: 5px;
+    letter-spacing: 1px;
+   
+}
+.footer-links a{
+letter-spacing: 2px;
+
+display: block;
+margin-top: 10px;
+transition: .3s ease;
+}
+.footer-links a:first{
+    margin-top: 20px; 
+}
+.footer-links a:hover{
+    color:#eee !important;
+    text-decoration: underline;
+
+}
+.social-links li{
+display: inline-block;
+width: 50px;
+height: 50px;
+}
+
+
+/* CAR.HTML ---------------------------------*/
+/* USTTEKI ORTAKLARA BAK */
+.logo img{
+    z-index: -1;
+    position: relative;
+}
+#car-parallax {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/c1.jpg)  center no-repeat;
+    background-size: cover;
+    text-align: center;
+  
+    color: white;
+    font-size: 15px;
+}
+
+
+/*  INSPECT -------------  */
+#inspect{
+   background-color: #eee; 
+}
+.inspect-top{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.inspect-top p{
+    color:#550d16;
+}
+
+.inspect-body .col2{
+    display: flex;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .04);
+    margin-right: 20px;
+}
+
+.inspect-image{
+width: 40%;
+}
+.inspect-image img{
+    width: 100%;
+    height: auto;
+}
+
+.inspect-text{
+width: 60%;
+padding-left: 10px;
+}
+.inspect-text .date{
+    color:#333;
+    font-size: 12px;
+    font-style: italic;
+}
+.inspect-text h4{
+    color:#550d16;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 6px 0;
+}
+.inspect-text a{
+    float: right;
+    text-decoration: none;
+    color:#550d16;
+}
+.inspect-text a:hover{
+    text-decoration: underline;
+}
+
+/*  PROJECTX -------------  */
+#projectx{
+    padding-bottom: 0;
+}
+.projectx-top{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.projectx-body .container-fluid{
+    height: 500px;
+   
+    background: url(../img/prox.jpg) center center no-repeat;
+    background-size: cover;
+
+}
+.projectx-body .caption-px{
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+.projectx-info{
+    position: relative;
+    margin-left: 20px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.projectx-title{
+    /* text-align: right; */
+    font-size:30px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color:#550d16 ;
+}
+.projectx-text{
+    color:dimgrey;
+}
+.projectx-btn{
+background-color: #550d16;
+color:#fff;
+padding: 15px 30px;
+border:none;
+/* float: right; */
+display: block;
+margin: 20px auto;
+transition: all .5s ease;
+}
+.projectx-btn:hover{
+    background-color: #eee;
+    color:#550d16;
+    cursor: pointer;
+}
+.pro-highlight{
+    display: inline-block;
+    background-color: #550d16;
+    padding: 30px 20px;
+}
+.projectx-body .container-fluid .col2{
+    /* col2 lere genel olarak padding vermıstık onu kaldırdım.*/
+    padding: 0;
+}
+
+.pro-detail li{
+color:#eee;
+margin-top:10px;
+}
+
+/* ABOUT HTML --------------------*/
+
+#about {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/bf.jpg)  center no-repeat;
+    background-size: cover;
+    text-align: center;
+  
+    color: white;
+    font-size: 15px;
+}
+
+#about h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* ourhistory */
+#ourhistory {
+    background-color: #f5f5f5;
+   
+}
+.ourhistory-top{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.ourhistory-body .container-fluid{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#ourhistory .col2{
+padding: 0;
+display: flex;
+height: 100px;;
+
+}
+/* .ourhistory-body{
+     margin-top:60px;
+} */
+.ourhistory-body .ourhistory-date{
+    text-align: center;
+    padding: 30px auto;
+    /* width: 16%; */
+    flex:1;
+    font-size: 25px;
+    font-weight: bold;
+    color:#eee;
+    background-color: #550d16;
+    line-height: 100px;
+    letter-spacing: 2px;
+}
+
+.ourhistory-body .ourhistory-image {
+/* width: 34%; */
+flex:2
+
+}
+.ourhistory-body .ourhistory-image img{
+    width: 100%;
+    height: 100%;
+    
+    }
+
+.ourhistory-body .ourhistory-text{
+    /* width:50%; */
+    flex: 3;
+    padding-left: 10px;
+    border-top:1px solid #550d16;
+    border-bottom:1px solid #550d16;
+}
+.ourhistory-text p{
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* TEAM SECTION ---------------------*/
+#team{
+    padding-bottom: 0;
+}
+.team-top{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.team-body .container-fluid{
+    display: flex;
+    
+    width: 100%;
+}
+.team-member{
+ position: relative;
+ width: 100%;
+
+}
+.team-member-img{
+display: block;
+ width: 100%;
+ height: 100%;
+}
+
+
+.team-member-info{
+    position: absolute;
+    display: inline-block;
+    background-color: #550d16;
+    padding: 15px;
+    color:#eee ;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: .0;
+    transition: .3s  ease;
+  
+}
+.team-member-info h5{
+    margin-bottom: 5px;
+  
+}
+.member-social-links li{
+display: inline;
+
+
+
+
+}
+.member-social-links li a{
+    color:#eee ;
+   font-size: 20px;
+   padding: 5px;
+  
+    
+}
+.team-member:hover .team-member-info{
+    opacity: 1;
+}
+
